@@ -41,15 +41,17 @@
 
 
 
-<?php foreach ($names as $name) : ?>
-<li><?= $name ?> </li>
-    <?php endforeach; ?>
+    
+
+            <?php foreach($animals as $animal): ?>
+                <li> <?= $animal ?></li>
+            <?php endforeach; ?>
 
 
-            <?php
-                foreach($names as $name){
-                    echo "<li>$name</li>";
-                }
+          
+            <?php foreach($animals as $animal){
+                echo "<li>$animal</li>";
+            }
             ?>
 
         </ul>

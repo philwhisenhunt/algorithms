@@ -1,10 +1,13 @@
 <?php
 
-$names = [
+$animals = [
 
-    'Jeff',
-    'John',
-    'Bobby'
+'badger',
+'tiger',
+'bear',
+'aardvark',
+'lion'
+
 ];
 
 
