@@ -39,20 +39,31 @@
 
         <ul>
 
+<?php
+
+echo 'This person has the following traits: ';
+foreach ($person as $feature => $trait ): 
+
+?>
+<li><strong><?= ucwords($feature); ?></strong> <?= $trait ?> </li>
 
 
-    
+<?php endforeach ?>
 
-            <?php foreach($animals as $animal): ?>
-                <li> <?= $animal ?></li>
-            <?php endforeach; ?>
+<?php foreach ($fruits as $fruit) :?>
+<li><?= $fruit ?></li>
+<?php endforeach ?>
+
+<?= $tasks['completed'] ? 'Yes' : 'Not yet' ?>
 
 
-          
-            <?php foreach($animals as $animal){
-                echo "<li>$animal</li>";
-            }
-            ?>
+    <?php if (!$tasks['completed']) : ?>
+        <span class = "icon">&#9989;</span>
+        <?php else :
+            echo "It was true";
+        ?>
+    <?php endif; ?>
+
 
         </ul>
     </body>
