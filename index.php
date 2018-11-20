@@ -1,5 +1,12 @@
 <?php
 
-$greeting = 'hello world';
+$names = [
+
+    'Jeff',
+    'John',
+    'Bobby'
+];
+
+
 
 require 'index.view.php';
