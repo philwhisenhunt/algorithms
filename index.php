@@ -29,7 +29,7 @@
         <header>
             <h1>
             <?=
-           'Hello, '.htmlspecialchars($_GET['name']); 
+           'Hello, you are wearing '.htmlspecialchars($_GET['color']); 
             
             
             ?>
