@@ -1,44 +1,24 @@
 <?php
 
-$animals = [
 
-'badger',
-'tiger',
-'bear',
-'aardvark',
-'lion'
+require 'functions.php';
 
+
+
+$codewordlist = [
+'spoof', 'leaf', 'town'
 ];
 
-$person = [
-
-    'hair' => 'brown',
-    'age' => 90,
-    'alive' => true
-];
-
-$person['golfer'] = true;
-
-$fruits = ['apple', 'banana'];
-$fruits[] = 'kiwi';
-
-echo '<pre>';
-var_dump($fruits);
-
-echo '</pre>';
-
-unset($person['age']);
-
-$tasks = [
-    'chore' => 'dust',
-    'completed' => true
-];
-
-echo '<pre>';
-var_dump($tasks);
-echo '</pre>';
 
 
+if(ageCheck(19)){
+    echo "Go on in";
+}
+else {
+    echo "Not allowed";
+}
 
+
+dd(ageCheck(15));
 
 require 'index.view.php';
