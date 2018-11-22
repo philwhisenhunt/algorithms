@@ -4,6 +4,17 @@
 require 'functions.php';
 
 
+//Todo Application
+//Todo, Comment, User
+class Task {
+
+    public function __construct()
+    {
+        //Automatically triggered on instantiation
+    }
+}
+
+
 
 $codewordlist = [
 'spoof', 'leaf', 'town'
