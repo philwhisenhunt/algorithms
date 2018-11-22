@@ -10,7 +10,7 @@ class Task {
 
     protected $description;
     protected $completed = false;
-    
+
     public function __construct($description)
     {
         
@@ -20,7 +20,9 @@ class Task {
     }
 
 }
-$task = new Task();
+$task = new Task('Go to the store');
+
+dd($task);
 
 
 
