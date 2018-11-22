@@ -8,11 +8,14 @@ require 'functions.php';
 //Todo, Comment, User
 class Task {
 
-    public function __construct()
+    public function __construct($description)
     {
         //Automatically triggered on instantiation
+        $this-> description = $description;
     }
+
 }
+$task = new Task();
 
 
 
