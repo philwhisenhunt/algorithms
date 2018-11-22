@@ -9,6 +9,8 @@ require 'functions.php';
 class Task {
 
     protected $description;
+    protected $completed = false;
+    
  
     public function __construct($description)
     {
@@ -18,9 +20,15 @@ class Task {
         $this-> description = $description;
     }
 
+    public function Complete()
+    {
+        $this->completed = true;
+    }
+    
+
     public function  isComplete()
     {
-        
+        return $this->completed;
     }
 
 }
