@@ -24,6 +24,8 @@ $task = new Task('Go to the store');
 
 dd($task);
 
+var_dump($task->isComplete());
+
 
 
 $codewordlist = [
