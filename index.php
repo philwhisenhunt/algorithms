@@ -34,7 +34,7 @@ class Task {
 }
 $task = new Task('Go to the store');
 
-
+$task->complete();
 
 var_dump($task->isComplete());
 
