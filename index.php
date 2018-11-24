@@ -32,11 +32,24 @@ class Task {
     }
 
 }
-$task = new Task('Go to the store');
 
-$task->complete();
+$tasks = [
+    new Task('Go to the store'),
+    new Task('Finish my screencast'),
+    new Task('Clean my room')
+];
 
-var_dump($task->isComplete());
+dd($tasks);
+
+
+
+
+
+// $task = new Task('Go to the store');
+
+// $task->complete();
+
+// var_dump($task->isComplete());
 
 
 
