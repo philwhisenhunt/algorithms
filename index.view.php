@@ -27,11 +27,13 @@
        <li>
        <?php if ($task->completed) : ?>
        <strike>
-        <?= $task->description; ?>
-       </strike>
-        </li>
-
        <?php endif ?>
+
+        <?php if ($task->completed) : ?>
+        </strike>
+        <?php endif ?>
+        </li>
+    
      <?php endforeach; ?>
      </ul>
         <header>
