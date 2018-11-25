@@ -39,33 +39,7 @@ $tasks = [
     new Task('Clean my room')
 ];
 
-// dd($tasks);
-
-
-
-
-
-// $task = new Task('Go to the store');
-
-// $task->complete();
-
-// var_dump($task->isComplete());
-
-
-
-$codewordlist = [
-'spoof', 'leaf', 'town'
-];
-
-
-
-if(ageCheck(19)){
-    echo "Go on in";
-}
-else {
-    echo "Not allowed";
-}
-
+$tasks[0]->Complete();
 
 
 
