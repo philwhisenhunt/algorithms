@@ -39,7 +39,7 @@ $tasks = [
     new Task('Clean my room')
 ];
 
-dd($tasks);
+// dd($tasks);
 
 
 
@@ -67,6 +67,6 @@ else {
 }
 
 
-dd(ageCheck(15));
+
 
 require 'index.view.php';

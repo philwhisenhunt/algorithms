@@ -22,8 +22,11 @@
         </style>
     </head>
     <body>
-     
-
+    <ul>
+         <?php foreach ($tasks as $task) : ?>
+       <li><?= $task->description; ?></li>
+     <?php endforeach; ?>
+     </ul>
         <header>
             <h1>
            
