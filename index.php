@@ -8,8 +8,8 @@ require 'functions.php';
 //Todo, Comment, User
 class Task {
 
-    protected $description;
-    protected $completed = false;
+    public $description;
+    public $completed = false;
     
  
     public function __construct($description)
