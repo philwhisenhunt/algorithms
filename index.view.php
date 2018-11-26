@@ -18,29 +18,19 @@
     <body>
     <ul>
          <?php foreach ($tasks as $task) : ?>
-              <li>
-                 <?php if ($task->completed) : ?>
-                  <strike>
-                 <?php endif ?>
-                 <?= $task->description ?>
+            <li>
+                <?php if ($task->completed) : ?>
 
-                 <?php if ($task->completed) : ?>
-                    </strike>
-                 <?php endif ?>
-                 </li>
-    
-         <?php endforeach; ?>
+                    <strike> <?= $task->description; ?> </strike>
 
+                <?php else: ?>
 
-         <?php foreach ($tasks as $task) : ?>
-         <li>
-         <?php if ($task->completed) : ?>
-         <strike>
-        <?php endif; ?>
-        <?= $task->description; ?>
-        </li>
-<?php endforeach; ?>
+                    <?= $task->description; ?>
 
+                <?php endif ?>
+            </li>
+        <?php endforeach; ?>
+           
      </ul>
   
     </body>

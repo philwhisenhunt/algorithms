@@ -40,7 +40,7 @@ $tasks = [
 ];
 
 $tasks[0]->Complete();
-
+$tasks[1]->Complete();
 
 
 require 'index.view.php';
