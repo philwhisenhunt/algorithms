@@ -34,8 +34,13 @@
 
          <?php foreach ($tasks as $task) : ?>
          <li>
-         <?php if ($task->completed) : 
-         </li>
+         <?php if ($task->completed) : ?>
+         <strike>
+        <?php endif; ?>
+        <?= $task->description; ?>
+        </li>
+<?php endforeach; ?>
+
      </ul>
   
     </body>
