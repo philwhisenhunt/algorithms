@@ -1,21 +1,22 @@
 <?php
 
+require 'Task.php';
+
+
 try{
     $pdo = new PDO('mysql:host=127.0.0.1; dbname=mytodo', 'root', '');
 
 }
 
 catch(PDOException $e){
-    die('Could not connect. ');
+    die($e->getMessage);
 }
 
 $statement = $pdo->prepare('select * from todos');
 
 $statement->execute();
 
-$results = $statement->fetchAll(PDO::FETCH_OBJ);
+// $tasks = $statement->fetchAll(PDO::FETCH_OBJ);
 
-var_dump($results[0]->description);
-
-
+$tasks = $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
 require 'index.view.php';
