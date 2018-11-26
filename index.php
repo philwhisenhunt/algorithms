@@ -1,46 +1,13 @@
 <?php
 
+require 'index.view.php';
 
-require 'functions.php';
 
-
-//Todo Application
-//Todo, Comment, User
-class Task {
-
-    public $description;
-    public $completed = false;
-    
- 
-    public function __construct($description)
-    {
-        
-
-        //Automatically triggered on instantiation
-        $this-> description = $description;
-    }
-
-    public function Complete()
-    {
-        $this->completed = true;
-    }
-    
-
-    public function  isComplete()
-    {
-        return $this->completed;
-    }
+try{
+    $pdo = new PDO('mysql:host=127.0.0.1; dbname=mytodo', 'root', '');
 
 }
 
-$tasks = [
-    new Task('Go to the store'),
-    new Task('Finish my screencast'),
-    new Task('Clean my room')
-];
-
-$tasks[0]->Complete();
-$tasks[1]->Complete();
-
-
-require 'index.view.php';
+catch(PDOException $e){
+    die('Could not connect. ');
+}
