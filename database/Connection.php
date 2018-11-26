@@ -6,3 +6,8 @@ class Connection
 
     }
 }
+
+// $conection = new Connection();
+// $connection->make();
+
+Connection::make();
