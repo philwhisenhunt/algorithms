@@ -1,47 +1,21 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-
-        <style>
+<?php require('partials/head.php'); ?>
        
-        </style>
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li>
-                <a href="/about.php">About Page</a> </li>
-                <li>
-                <a href="/contact.php">Contact Page</a>
+<h1>My tasks</h1>
 
-                </li>
-            </ul>
-        </nav>
-    <ul>
-         <?php foreach ($tasks as $task) : ?>
-            <li>
-                <?php if ($task->completed) : ?>
+<?php foreach ($tasks as $task) : ?>
+    <li>
+        <?php if ($task->completed) : ?>
 
-                    <strike> <?= $task->description; ?> </strike>
+            <strike> <?= $task->description; ?> </strike>
 
-                <?php else: ?>
+        <?php else: ?>
 
-                    <?= $task->description; ?>
+            <?= $task->description; ?>
 
-                <?php endif ?>
-            </li>
-        <?php endforeach; ?>
-           
-     </ul>
+        <?php endif ?>
+    </li>
+<?php endforeach; ?>
+
   
-    </body>
-</html>
+     <?php require('partials/footer.php'); ?>
+
