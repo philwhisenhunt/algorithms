@@ -26,14 +26,10 @@ $posts = [
 //     return $post->published;
 // });
 
-// $modified = array_map(function ($post) {
-//     $post->published = true;
+$modified = array_map(function ($post) {
+   return (array) $post;
+}, $posts);
 
-//     return $post;
-// }, $posts);
+var_dump($modified);
 
-foreach ($posts as $post){
-    $post->published = true;
-}
 
-var_dump($posts);
