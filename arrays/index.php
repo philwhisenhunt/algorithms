@@ -26,10 +26,12 @@ $posts = [
 //     return $post->published;
 // });
 
-$modified = array_map(function ($post) {
-    return ['title' => $post->title];
+// $modified = array_map(function ($post) {
+//     return ['title' => $post->title];
+// }, $posts);
+
+
+$titles = array_map(function ($post) {
+    return $post->title;
 }, $posts);
-
-var_dump($modified);
-
-
+var_dump($titles);
