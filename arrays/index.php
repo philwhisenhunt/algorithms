@@ -19,6 +19,10 @@ $posts = [
 ];
 
 $unpublishedPosts = array_filter($posts, function ($post){
+    return ! $post->published === false;
+});
+
+$publishedPosts = array_filter($posts, function ($post){
     return $post->published === false;
 });
 
