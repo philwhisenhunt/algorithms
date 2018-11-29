@@ -2,20 +2,24 @@
 class Post
 {
     public $title;
+
+    public $author;
+
     public $published;
 
-    public function __construct($title, $published)
+    public function __construct($title, $author, $published)
     {
         $this->title = $title;
+        $this->author = $author;
         $this->published = $published;
     }
 }
 
 $posts = [
-    new Post('My First Post', true),
-    new Post('My Second Post', true),
-    new Post('My Third Post', true),
-    new Post('My Fourth Post', false),
+    new Post('My First Post', 'PW', true),
+    new Post('My Second Post', 'PW', true),
+    new Post('My Third Post', 'AW', true),
+    new Post('My Fourth Post', 'TR', false),
 ];
 
 // $unpublishedPosts = array_filter($posts, function ($post){
@@ -36,4 +40,7 @@ $posts = array_map(function ($post){
 }, $posts);
 
 
-var_dump($posts);
+
+$authors = array_column($posts, 'author', 'title');
+
+var_dump($authors); 
