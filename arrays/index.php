@@ -18,12 +18,22 @@ $posts = [
     new Post('My Fourth Post', false),
 ];
 
-$unpublishedPosts = array_filter($posts, function ($post){
-    return ! $post->published === false;
-});
+// $unpublishedPosts = array_filter($posts, function ($post){
+//     return ! $post->published;
+// });
 
-$publishedPosts = array_filter($posts, function ($post){
-    return $post->published === false;
-});
+// $publishedPosts = array_filter($posts, function ($post){
+//     return $post->published;
+// });
 
-var_dump($unpublishedPosts);
+// $modified = array_map(function ($post) {
+//     $post->published = true;
+
+//     return $post;
+// }, $posts);
+
+foreach ($posts as $post){
+    $post->published = true;
+}
+
+var_dump($posts);
