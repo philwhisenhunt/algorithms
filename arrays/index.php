@@ -27,7 +27,7 @@ $posts = [
 // });
 
 $modified = array_map(function ($post) {
-   return (array) $post;
+    return ['title' => $post->title];
 }, $posts);
 
 var_dump($modified);
