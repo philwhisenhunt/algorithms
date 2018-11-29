@@ -31,7 +31,10 @@ $posts = [
 // }, $posts);
 
 
-$titles = array_map(function ($post) {
-    return $post->title;
-}, $posts);
-var_dump($titles);
+foreach ($posts as $index => $post)
+{
+    $posts[$index] = (array) $post;
+}
+
+
+var_dump($posts);
