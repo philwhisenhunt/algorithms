@@ -31,10 +31,9 @@ $posts = [
 // }, $posts);
 
 
-foreach ($posts as $index => $post)
-{
-    $posts[$index] = (array) $post;
-}
+$posts = array_map(function ($post){
+    return (array) $post;
+}, $posts);
 
 
 var_dump($posts);
