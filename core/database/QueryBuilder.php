@@ -19,12 +19,24 @@ class QueryBuilder
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
-    public function writeAll($table)
+    public function insert($table, $parameters)
     {
-        $statement = $this->pdo->prepare("insert * into {$table}");
-        $statement->execute();
+        //insert into %s (%s) values (%s)
 
-        return $statement->fetchAll(PDO::FETCH_CLASS);
+        $sql = sprintf(
+            'insert into %s (%s) values (%s)',
+            'one', 'two', 'three'
+        );
+
+        die(var_dump($sql));
+        
+        // insert into names (names, email) values (:name, :email)
+        $statement->execute(['name' => 'Joe', 'email' => 'joe@example.com']);
+
+        // $statement = $this->pdo->prepare("insert * into {$table}");
+        // $statement->execute();
+
+        // return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
 }

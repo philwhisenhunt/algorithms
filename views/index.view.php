@@ -4,7 +4,7 @@
 
 <form method="POST" action="/names">
 
-<input name="name"> </input>
+<input name="name"> 
 <button type="submit">Submit</button>
 
 </form>
