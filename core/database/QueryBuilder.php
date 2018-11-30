@@ -21,22 +21,15 @@ class QueryBuilder
 
     public function insert($table, $parameters)
     {
-        //insert into %s (%s) values (%s)
+       die(var_dump(array_keys($parameters)));
 
         $sql = sprintf(
             'insert into %s (%s) values (%s)',
             'one', 'two', 'three'
         );
 
-        die(var_dump($sql));
-        
-        // insert into names (names, email) values (:name, :email)
-        $statement->execute(['name' => 'Joe', 'email' => 'joe@example.com']);
+        // die(var_dump($sql));
 
-        // $statement = $this->pdo->prepare("insert * into {$table}");
-        // $statement->execute();
-
-        // return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
 }
