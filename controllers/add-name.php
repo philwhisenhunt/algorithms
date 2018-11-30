@@ -5,3 +5,4 @@ $app['database']->insert('users', [
     
 ]);
 
+header('Location: /');
