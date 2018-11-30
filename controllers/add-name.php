@@ -1,3 +1,3 @@
 <?php
 
-var_dump($_POST['age']);
+var_dump('You typed ' . $_POST['name']);
