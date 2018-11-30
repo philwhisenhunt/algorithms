@@ -19,5 +19,13 @@ class QueryBuilder
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
+    public function writeAll($table)
+    {
+        $statement = $this->pdo->prepare("insert * into {$table}");
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
+
 }
 
