@@ -2,8 +2,10 @@
 
 class App
 {
-    public static function ()
+    public static function bind($key, $value)
     {
-        
+
     }
+
+    
 }
