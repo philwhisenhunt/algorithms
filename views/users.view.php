@@ -3,7 +3,7 @@
 
 
 <h1>Home Page</h1>
-<!-- <?php foreach ($users as $user) : ?>
+<?php foreach ($users as $user) : ?>
 
 
 <li><?= $user->name ?></li>
@@ -17,7 +17,7 @@
     <input name="name"> 
     <button type="submit">Submit</button>
 
-</form> -->
+</form>
 
 
      <?php require('partials/footer.php'); ?>

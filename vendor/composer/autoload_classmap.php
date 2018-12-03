@@ -18,4 +18,5 @@ return array(
     'Request' => $baseDir . '/core/Request.php',
     'Router' => $baseDir . '/core/Router.php',
     'Task' => $baseDir . '/arrays/memoryIndex.php',
+    'UsersController' => $baseDir . '/controllers/UsersController.php',
 );
