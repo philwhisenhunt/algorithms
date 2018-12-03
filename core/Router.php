@@ -29,10 +29,8 @@ class Router
 
     public function direct($uri, $requestType)
     {
-        //example.com/about-culture
+        die(var_dump($uri, $requestType));
 
-        //Use the array_key_exists function to search through the routes
-        //and look for anything that matches the given $uri
         if(array_key_exists($uri, $this->routes[$requestType])){
             return $this->routes[$requestType][$uri];
         }
