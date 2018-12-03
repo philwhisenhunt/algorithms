@@ -6,12 +6,15 @@ class PagesController
     {
         $users = App::get('database')->selectAll('users');
 
-        return view('index');
+        return view('index', [
+            'users' => $users
+        ]);
     }
 
     public function about()
     {
-        return view('about');
+        $company = 'Laracasts';
+        return view('about', ['company' => $company]);
     }
 
     public function contact()
