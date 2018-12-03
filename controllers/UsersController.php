@@ -4,6 +4,12 @@ class UsersController
 {
     public function index()
     {
-        return view('users');
+        $users = App::get('database')->selectAll('users');
+        return view('users', compact('users'));
+    }
+
+    public function store()
+    {
+        
     }
 }

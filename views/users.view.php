@@ -12,7 +12,7 @@
        
 <h1>Submit your name</h1>
 
-<form method="POST" action="/names">
+<form method="POST" action="/users">
 
     <input name="name"> 
     <button type="submit">Submit</button>
